@@ -90,6 +90,9 @@ def json_response(payload: dict, status: int = 200) -> Response:
 
 
 # -------------------- Routes --------------------
+def home():
+    return {"message": "Backend is running successfully 🚀"}
+
 
 @app.route("/api/health")
 def health():
@@ -232,3 +235,4 @@ def export_report():
 if __name__ == "__main__":
     # Use 0.0.0.0 so Vite can reach it
     app.run(host="0.0.0.0", port=5000, debug=True)
+
